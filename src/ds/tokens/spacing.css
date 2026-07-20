@@ -1,0 +1,35 @@
+/* ============================================================
+   VIOLA VENTURES SPACING
+   Base unit is 5px (NOT 4px) — the theme sets --spacing:5px.
+   Tokens are multiples of that unit; layout gutters are viewport-based.
+   ============================================================ */
+
+:root {
+  --spacing: 5px;
+
+  --space-0: 0;
+  --space-1: 5px;
+  --space-2: 10px;
+  --space-3: 15px;
+  --space-4: 20px;
+  --space-5: 25px;
+  --space-6: 30px;
+  --space-8: 40px;
+  --space-9: 45px;
+  --space-10: 50px;
+  --space-12: 60px;
+  --space-16: 80px;
+  --space-18: 90px;
+  --space-20: 100px;
+  --space-24: 120px;
+
+  /* Page gutter — the site uses 100vw/16 (6.25vw) inline padding */
+  --content-gutter: 6.25vw;
+
+  /* Container widths */
+  --container-xl: 36rem;
+  --container-2xl: 42rem;
+  --container-4xl: 56rem;
+  --container-5xl: 64rem;
+  --container-max: 110rem;
+}

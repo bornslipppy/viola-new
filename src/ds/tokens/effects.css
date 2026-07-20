@@ -1,0 +1,34 @@
+/* ============================================================
+   VIOLA VENTURES EFFECTS — radii, borders, motion, elevation
+   The system is flat & editorial: hairline borders over shadows,
+   sharp corners on panels, full pills on interactive controls.
+   ============================================================ */
+
+:root {
+  /* Radii — panels are square; controls are pills */
+  --radius-none: 0;
+  --radius-sm: 0.25rem;   /* 4px  — inputs, small chips */
+  --radius-md: 0.375rem;  /* 6px  — cards when rounded */
+  --radius-lg: 0.75rem;   /* 12px */
+  --radius-full: 3.40282e38px; /* pills, circular icon buttons */
+
+  /* Borders */
+  --border-width: 1px;
+  --border-hairline: 1px solid var(--border);
+
+  /* Motion — snappy, linear-ish, no bounce */
+  --duration-fast: 0.15s;  /* @kind other */
+  --duration-base: 0.3s;   /* @kind other */
+  --duration-slow: 0.6s;   /* @kind other */
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);      /* @kind other */
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);     /* @kind other */
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+  /* text-reveal / marquee easing */
+  --ease-mask: cubic-bezier(0.76, 0, 0.24, 1); /* @kind other */
+  --transition-base: all var(--duration-fast) var(--ease-in-out);
+
+  /* Elevation — used sparingly; mostly for popovers/menus */
+  --shadow-sm: 0 1px 2px rgba(15, 14, 11, 0.06);
+  --shadow-md: 0 8px 24px rgba(15, 14, 11, 0.1);
+  --shadow-pop: 0 12px 40px rgba(15, 14, 11, 0.16);
+}

@@ -1,0 +1,114 @@
+/* ============================================================
+   APTOS TYPOGRAPHY — webfonts
+   Primary type suite: Season by Displaay
+     • Season Sans   → headlines (Medium) and body (Regular)
+     • Season Serif  → variable display serif for large editorial headlines
+   Secondary:
+     • Akkurat Mono  → captions, URLs, page numbers, chart/graph data.
+                       ALWAYS Regular — never bold or italic.
+   Fallbacks (per brand guidelines, when Season/Akkurat aren't available —
+   e.g. Google Slides or community materials): IBM Plex Sans / Serif / Mono,
+   open-source on Google Fonts.
+   (Season Sans is served from the SeasonMix woff2 — the sans member of the
+   Season family shipped with this project.)
+   ============================================================ */
+
+/* ---- IBM Plex fallbacks (Google Fonts) ---- */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500&display=swap");
+
+/* ---- Season Sans (primary sans) ---- */
+@font-face {
+  font-family: "Season Sans";
+  src: url("../assets/fonts/SeasonMix-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Season Sans";
+  src: url("../assets/fonts/SeasonMix-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Season Sans";
+  src: url("../assets/fonts/SeasonMix-RegularItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Season Sans";
+  src: url("../assets/fonts/SeasonMix-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Season Sans";
+  src: url("../assets/fonts/SeasonMix-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Season Sans";
+  src: url("../assets/fonts/SeasonMix-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---- Season Serif (primary variable display serif) ---- */
+@font-face {
+  font-family: "Season Serif";
+  src: url("../assets/fonts/SeasonSerif-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Season Serif";
+  src: url("../assets/fonts/SeasonSerif-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Season Serif";
+  src: url("../assets/fonts/SeasonSerif-RegularItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Season Serif";
+  src: url("../assets/fonts/SeasonSerif-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Season Serif";
+  src: url("../assets/fonts/SeasonSerif-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Season Serif";
+  src: url("../assets/fonts/SeasonSerif-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---- Akkurat Mono (secondary) — Regular weight only per brand guidelines ---- */
+@font-face {
+  font-family: "Akkurat Mono";
+  src: url("../assets/fonts/AkkuratMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

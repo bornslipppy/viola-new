@@ -1,0 +1,7 @@
+/* Intentionally minimal. Base document styling (box-sizing, body reset, fonts,
+   colors) comes from the design system: src/ds/tokens/base.css.
+
+   The Storyblok blueprint starter stylesheet is NOT imported globally — it set
+   `body { max-width: 1040px }`, which capped the full-bleed Viola design. It is
+   now loaded only on the Storyblok demo route (src/app/[[...slug]]/page.js) so
+   that route keeps its styling without constraining the rest of the app. */

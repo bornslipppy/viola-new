@@ -1,0 +1,164 @@
+/* ============================================================
+   APTOS TYPOGRAPHY
+   Two primary faces + one secondary (see brand guidelines):
+   - sans  : Season Sans   → headlines (Medium) AND body/UI (Regular)
+   - serif : Season Serif  → variable display serif, large editorial headlines
+   - mono  : Akkurat Mono  → captions, URLs, page numbers, chart data (Regular)
+   Fallbacks: IBM Plex Sans / Serif / Mono.
+   ============================================================ */
+
+:root {
+  --font-sans: "Season Sans", "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Season Serif", "IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --font-mono: "Akkurat Mono", "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;   /* Season Sans headline weight */
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* -- Type scale ------------------------------------------
+     Small steps are fixed; display steps (3xl–6xl) scale fluidly up to the
+     big hero, anchored at the theme's base values. */
+  --text-2xs: 0.563rem;    /* 9px  */
+  --text-xs: 0.688rem;     /* 11px — mono labels */
+  --text-sm: 0.813rem;     /* 13px */
+  --text-base: 0.938rem;   /* 15px — body */
+  --text-lg: 1rem;         /* 16px */
+  --text-xl: 1.125rem;     /* 18px */
+  --text-2xl: 1.375rem;    /* 22px */
+  /* Fluid middle terms held in their own vars so the display sizes stay
+     single-expression (keeps the token scanner from misreading clamp args). */
+  --fluid-3xl: calc(1.1rem + 1.4vw);  /* @kind other */
+  --fluid-4xl: calc(1.4rem + 3vw);    /* @kind other */
+  --fluid-5xl: calc(1.6rem + 5vw);    /* @kind other */
+  --fluid-6xl: calc(1.6rem + 9.5vw);  /* @kind other */
+  --text-3xl: clamp(1.375rem, var(--fluid-3xl), 2rem);     /* 22–32px */
+  --text-4xl: clamp(2rem, var(--fluid-4xl), 3.25rem);      /* 32–52px */
+  --text-5xl: clamp(2.75rem, var(--fluid-5xl), 5rem);      /* 44–80px */
+  --text-6xl: clamp(3.75rem, var(--fluid-6xl), 9rem);      /* 60–144px hero */
+
+  /* Line-heights — per the Aptos type scale (Example Usage) */
+  --leading-display: 0.95;   /* Display / Headline Large */
+  --leading-headline: 1.05;  /* Headline */
+  --leading-snug: 1.1;       /* Sub Headline / Body */
+  --leading-normal: 1.4;
+  --leading-relaxed: 1.625;
+  --leading-mono: 1.2;       /* Tertiary / mono */
+
+  /* Tracking — per the Aptos type scale */
+  --tracking-display: -0.04em;  /* Display / Headline Large */
+  --tracking-tight: -0.02em;    /* Headline / Sub Headline */
+  --tracking-normal: 0;         /* Body */
+  --tracking-mono: 0.02em;      /* Tertiary / mono */
+  --tracking-wide: 0.03em;
+  --tracking-widest: 0.1em;
+}
+
+/* ============================================================
+   Aptos role classes — map directly to the brand type scale.
+   ============================================================ */
+.type-display-large {
+  font-family: var(--font-serif);
+  font-size: var(--text-6xl);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+}
+.type-headline-large {
+  font-family: var(--font-serif);
+  font-size: var(--text-5xl);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+}
+.type-headline {
+  font-family: var(--font-sans);
+  font-size: var(--text-4xl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-headline);
+  letter-spacing: var(--tracking-tight);
+}
+.type-sub-headline {
+  font-family: var(--font-sans);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+}
+.type-body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-normal);
+}
+.type-tertiary {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--leading-mono);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+}
+
+/* ---- Legacy aliases (h1–h5 / body / mono) mapped to the Aptos roles ---- */
+.typography-h1 {              /* Display Large — serif */
+  font-family: var(--font-serif);
+  font-size: var(--text-6xl);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+}
+.typography-h2 {              /* Headline Large — serif */
+  font-family: var(--font-serif);
+  font-size: var(--text-4xl);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+}
+.typography-h3 {              /* Headline — Season Sans Medium */
+  font-family: var(--font-sans);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-headline);
+  letter-spacing: var(--tracking-tight);
+}
+.typography-h4 {              /* Sub Headline — Season Sans Medium */
+  font-family: var(--font-sans);
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+}
+.typography-h5 {              /* small Sub Headline */
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+}
+.typography-body {            /* Body — Season Sans Regular */
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-normal);
+}
+.typography-body-s {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-normal);
+}
+.typography-mono {            /* Tertiary — Akkurat Mono Regular */
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--leading-mono);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+}

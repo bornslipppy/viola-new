@@ -1,0 +1,12 @@
+/* ============================================================
+   APTOS DESIGN SYSTEM — global entry point
+   Consumers link ONLY this file. It is an import manifest;
+   never add rules directly here.
+   ============================================================ */
+
+@import "tokens/fonts.css";
+@import "tokens/colors.css";
+@import "tokens/typography.css";
+@import "tokens/spacing.css";
+@import "tokens/effects.css";
+@import "tokens/base.css";

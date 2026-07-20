@@ -1,0 +1,60 @@
+/* ============================================================
+   VIOLA VENTURES COLOR SYSTEM
+   Warm, near-black + warm off-white "paper" neutrals, with three
+   soft accents (mint, blue, lime).
+   ============================================================ */
+
+:root {
+  /* -- Raw palette ---------------------------------------- */
+  --color-pure-white: #fffffa;
+  --color-white: #f9f9f0;   /* warm paper white */
+  --color-cream: #efecca;   /* pale chartreuse cream */
+  --color-sand: #ccc5a3;
+  --color-tan: #9d937c;
+  --color-ash: #3d3b34;
+  --color-graphite: #2f2d28;
+  --color-coal: #21201c;
+  --color-ink: #171612;
+  --color-black: #0f0e0b;   /* warm near-black */
+
+  /* Accents (constant across themes) */
+  --color-mint: #d5fad3;
+  --color-blue: #badbee;
+  --color-lime: #C7FF3D;
+
+  /* -- Semantic tokens (LIGHT theme = default) ------------- */
+  --surface-100: var(--color-white);   /* page */
+  --surface-200: var(--color-cream);   /* raised */
+  --surface-300: var(--color-sand);
+  --surface-400: var(--color-tan);
+
+  --inverted-100: var(--color-black);  /* primary text / inverted fills */
+  --inverted-200: var(--color-ink);
+  --inverted-300: var(--color-coal);
+  --inverted-400: var(--color-ash);
+
+  --accent-mint: var(--color-mint);
+  --accent-blue: var(--color-blue);
+  --accent-lime: var(--color-lime);
+  --accent-beige: var(--color-sand);
+
+  --border: rgba(15, 14, 11, 0.15);
+  --border-subtle: rgba(15, 14, 11, 0.1);
+
+  /* Text roles */
+  --text-primary: var(--inverted-100);
+  --text-secondary: rgba(15, 14, 11, 0.6);
+  --text-muted: rgba(15, 14, 11, 0.5);
+
+  /* Status */
+  --color-success: #166534;
+  --color-error: #c53030;
+  --accent-success: #dcfce7;
+  --accent-error: #fef2f2;
+  --accent-warning: #fef3c7;
+  --on-success: #06371f;
+  --on-error: #3f1212;
+  --on-warning: #331a05;
+
+  color-scheme: light;
+}

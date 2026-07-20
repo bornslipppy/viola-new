@@ -1,0 +1,45 @@
+/* ============================================================
+   VIOLA VENTURES BASE — light resets + default document look.
+   Kept minimal; component styling lives with each component.
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--surface-100);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.4;
+  text-wrap: pretty;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Links default to the brand ink, underline-on-hover */
+a {
+  color: var(--inverted-100);
+  text-decoration: none;
+  transition: opacity var(--duration-fast) var(--ease-in-out);
+}
+a:hover {
+  opacity: 0.7;
+}
+
+/* Icon helper for the sprite */
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+::selection {
+  background: var(--accent-mint);
+  color: var(--color-black);
+}
