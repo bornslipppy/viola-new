@@ -2,6 +2,7 @@ import Feature from '@/components/Feature';
 import Grid from '@/components/Grid';
 import Teaser from '@/components/Teaser';
 import PageBlok from '@/components/storyblok/PageBlok';
+import BlogPost from '@/components/storyblok/BlogPost';
 import HeroBlok from '@/components/storyblok/HeroBlok';
 import {
 	LogoMarqueeBlok,
@@ -34,6 +35,7 @@ export const getStoryblokApi = storyblokInit({
 		teaser: Teaser,
 		// Viola homepage bloks
 		page: PageBlok,
+		blog_post: BlogPost,
 		hero: HeroBlok,
 		logo_marquee: LogoMarqueeBlok,
 		value_prop: ValuePropBlok,

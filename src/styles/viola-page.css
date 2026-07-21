@@ -46,6 +46,31 @@
 /* ---- Sticky stacked panels media frame ---- */
 .stackable-media { transform-origin: top center; will-change: transform; }
 
+/* ---- Blog post rich-text prose ---- */
+.vc-prose { margin-top: 40px; color: var(--color-black); }
+.vc-prose > * { max-width: 68ch; }
+.vc-prose p {
+	font-family: var(--font-sans); font-size: var(--text-xl); line-height: 1.6;
+	color: rgba(15, 14, 11, 0.82); margin: 0 0 24px;
+}
+.vc-prose h2 {
+	font-family: var(--font-serif); font-weight: 400; font-size: var(--text-3xl);
+	line-height: 1.1; letter-spacing: -0.02em; color: var(--color-black); margin: 48px 0 16px;
+}
+.vc-prose h3 {
+	font-family: var(--font-serif); font-weight: 400; font-size: var(--text-2xl);
+	line-height: 1.15; letter-spacing: -0.01em; margin: 36px 0 12px;
+}
+.vc-prose a { color: var(--color-black); text-decoration: underline; text-underline-offset: 3px; }
+.vc-prose strong { font-weight: 600; }
+.vc-prose ul, .vc-prose ol { font-family: var(--font-sans); font-size: var(--text-xl); line-height: 1.6; color: rgba(15, 14, 11, 0.82); padding-left: 1.2em; margin: 0 0 24px; }
+.vc-prose li { margin: 0 0 8px; }
+.vc-prose blockquote {
+	border-left: 2px solid var(--color-black); margin: 32px 0; padding: 4px 0 4px 24px;
+	font-family: var(--font-serif); font-size: var(--text-2xl); line-height: 1.35; letter-spacing: -0.01em;
+}
+.vc-prose img { max-width: 100%; display: block; margin: 32px 0; }
+
 /* ---- Viola funnel widget (from viola-funnel.js ensureStyle) ---- */
 .vf-root { font-family: var(--font-sans); background: transparent; color: #0F0E0B; width: 100%; margin: 0; }
 .vf-title { font-family: var(--font-serif); font-weight: 400; font-size: 34px; line-height: 1; letter-spacing: -0.02em; color: #0F0E0B; text-align: center; margin: 10px auto 0; opacity: 1; transition: opacity .28s ease-in-out; }
