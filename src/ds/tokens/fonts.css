@@ -19,42 +19,42 @@
 /* ---- Season Sans (primary sans) ---- */
 @font-face {
   font-family: "Season Sans";
-  src: url("../assets/fonts/SeasonMix-Light.woff2") format("woff2");
+  src: url("../assets/fonts/SeasonSans-TRIAL-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Season Sans";
-  src: url("../assets/fonts/SeasonMix-Regular.woff2") format("woff2");
+  src: url("../assets/fonts/SeasonSans-TRIAL-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Season Sans";
-  src: url("../assets/fonts/SeasonMix-RegularItalic.woff2") format("woff2");
+  src: url("../assets/fonts/SeasonSans-TRIAL-RegularItalic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Season Sans";
-  src: url("../assets/fonts/SeasonMix-Medium.woff2") format("woff2");
+  src: url("../assets/fonts/SeasonSans-TRIAL-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Season Sans";
-  src: url("../assets/fonts/SeasonMix-SemiBold.woff2") format("woff2");
+  src: url("../assets/fonts/SeasonSans-TRIAL-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Season Sans";
-  src: url("../assets/fonts/SeasonMix-Bold.woff2") format("woff2");
+  src: url("../assets/fonts/SeasonSans-TRIAL-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { RotatingWord } from '@/ds/components/content/RotatingWord';
+import { HeroRotatingWord } from '@/components/home/HeroRotatingWord';
 import { IconButton } from '@/ds/components/actions/IconButton';
 import { hero, rotatingWords } from '@/lib/homeContent';
 
@@ -52,16 +52,7 @@ export default function Hero({ content = hero, words = rotatingWords, editable }
 				<div>
 					<h1 style={serifHeadline}>
 						<span>{content.leadIn} </span>
-						<RotatingWord
-							words={words}
-							style={{
-								fontFamily: 'var(--font-serif)',
-								fontWeight: 300,
-								letterSpacing: '-0.02em',
-								textTransform: 'capitalize',
-								color: 'var(--color-black)',
-							}}
-						/>
+						<HeroRotatingWord words={words} style={{ color: 'var(--color-black)' }} />
 						<br />
 						<span>{content.trailing}</span>
 					</h1>

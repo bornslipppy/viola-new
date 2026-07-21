@@ -5,6 +5,29 @@
 .vc-page { background: var(--surface-100); color: var(--inverted-100); font-family: var(--font-sans); }
 .vc-page img { display: block; max-width: 100%; }
 
+/* ---- Season VF: variable font with a serif axis (SERF 0=sans → 100=serif),
+   used for the hero rotating word so it morphs sans→serif as it animates ---- */
+@font-face {
+	font-family: "Season VF";
+	src: url("../ds/assets/fonts/SeasonCollectionVF-TRIAL.woff2") format("woff2");
+	font-weight: 300 900;
+	font-stretch: normal;
+	font-display: swap;
+}
+@keyframes rotWipeOut {
+	0%   { clip-path: polygon(0 0, 110% 0, 110% 200%, 0 200%);       font-variation-settings: "SERF" 100; font-weight: 300; transform: translateX(0); }
+	100% { clip-path: polygon(110% 0, 110% 0, 110% 200%, 110% 200%); font-variation-settings: "SERF" 0;   font-weight: 375; transform: translateX(50px); }
+}
+@keyframes rotWipeIn {
+	0%   { clip-path: polygon(0 0, 0 0, 0 200%, 0 200%);       font-variation-settings: "SERF" 0;   font-weight: 375; transform: translateX(0); }
+	50%  { clip-path: polygon(0 0, 110% 0, 110% 200%, 0 200%); font-variation-settings: "SERF" 0;   font-weight: 375; transform: translateX(50px); }
+	100% { clip-path: polygon(0 0, 110% 0, 110% 200%, 0 200%); font-variation-settings: "SERF" 100; font-weight: 300; transform: translateX(0); }
+}
+.rot-out { animation: rotWipeOut 1s forwards cubic-bezier(.76, 0, .24, 1); }
+.rot-in  { animation: rotWipeIn 2s forwards cubic-bezier(.76, 0, .24, 1); }
+.rot-hidden { visibility: hidden; }
+@media (prefers-reduced-motion: reduce) { .rot-out, .rot-in { animation: none; } }
+
 /* ---- Hero founder slideshow ---- */
 .hero-slide {
 	position: absolute; inset: 0; width: 100%; height: 100%;
