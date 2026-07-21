@@ -106,7 +106,7 @@ export default function Hero({ content = hero, words = rotatingWords, editable }
 							<img
 								key={f.img}
 								{...f.editable}
-								className={`hero-slide${f.dim ? ' hero-slide-dim' : ''}${i === idx ? ' is-active' : ''}`}
+								className={`hero-slide${f.dim ? ' hero-slide-dim' : ''}`}
 								src={f.img}
 								alt={f.caption}
 								style={{ opacity: i === idx ? 1 : 0, objectPosition: f.objectPosition || '50% 50%' }}
